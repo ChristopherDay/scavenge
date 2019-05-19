@@ -1,6 +1,6 @@
 <?php
     new hook("actionMenu", function ($user) {
-    	if ($user->checkTimer("scavenge")) {
+    	if ($user && $user->checkTimer("scavenge")) {
 	        return array(
 	            "url" => "?page=scavenge", 
 	            "text" => "Scavenge", 
